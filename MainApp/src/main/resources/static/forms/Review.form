@@ -1,0 +1,120 @@
+{
+  "components": [
+    {
+      "label": "Car model",
+      "type": "textfield",
+      "id": "Field_0b61djr",
+      "key": "carModel",
+      "validate": {
+        "required": true,
+        "minLength": 1
+      },
+      "defaultValue": "kalina"
+    },
+    {
+      "label": "Modification",
+      "type": "textfield",
+      "id": "Field_0613kn6",
+      "key": "modification",
+      "validate": {
+        "required": true,
+        "minLength": 1
+      },
+      "defaultValue": "2000"
+    },
+    {
+      "label": "Manufactory date",
+      "type": "textfield",
+      "id": "Field_02v1oag",
+      "key": "manufactureYear",
+      "validate": {
+        "required": true,
+        "minLength": 1
+      },
+      "defaultValue": "2021-02-17 03:00:00.000000"
+    },
+    {
+      "label": "Ownership date",
+      "type": "textfield",
+      "id": "Field_0t5tq04",
+      "key": "ownershipDate",
+      "validate": {
+        "required": true,
+        "minLength": 1
+      },
+      "defaultValue": "2021-02-17 03:00:00.000000"
+    },
+    {
+      "label": "Mileage",
+      "type": "number",
+      "id": "Field_1ufusvf",
+      "key": "mileage",
+      "validate": {
+        "required": true,
+        "min": 0
+      },
+      "defaultValue": 148
+    },
+    {
+      "label": "Review text",
+      "type": "textfield",
+      "id": "Field_1700mqs",
+      "key": "reviewText",
+      "validate": {
+        "required": true,
+        "minLength": 1
+      },
+      "defaultValue": "My texty text"
+    },
+    {
+      "label": "Pros",
+      "type": "textfield",
+      "id": "Field_19xzb9x",
+      "key": "pros",
+      "validate": {
+        "required": true,
+        "minLength": 1
+      },
+      "defaultValue": "+++"
+    },
+    {
+      "label": "Cons",
+      "type": "textfield",
+      "id": "Field_0io6vio",
+      "key": "cons",
+      "validate": {
+        "required": true,
+        "minLength": 1
+      },
+      "defaultValue": "---"
+    },
+    {
+      "label": "Advice",
+      "type": "textfield",
+      "id": "Field_09iunfr",
+      "key": "advice",
+      "validate": {
+        "required": true,
+        "minLength": 1
+      },
+      "defaultValue": "Glow job"
+    },
+    {
+      "action": "submit",
+      "label": "Submit",
+      "type": "button",
+      "id": "Field_1pdcfv9",
+      "key": "field_1irpqim",
+      "properties": {}
+    }
+  ],
+  "type": "default",
+  "id": "ReviewForm",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.0.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.17.0",
+  "schemaVersion": 4
+}

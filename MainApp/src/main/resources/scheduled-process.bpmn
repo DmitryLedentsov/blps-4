@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1cpn9xa" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.0.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+  <bpmn:collaboration id="Collaboration_0a5azqh">
+    <bpmn:participant id="Participant_0c4avth" name="wroom.ru -- scheduled" processRef="scheduled-process" />
+  </bpmn:collaboration>
+  <bpmn:process id="scheduled-process" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="Every day">
+      <bpmn:outgoing>Flow_1a2wwuo</bpmn:outgoing>
+      <bpmn:timerEventDefinition id="TimerEventDefinition_16rpjxs">
+        <bpmn:timeCycle xsi:type="bpmn:tFormalExpression">R/P1D</bpmn:timeCycle>
+      </bpmn:timerEventDefinition>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_1a2wwuo" sourceRef="StartEvent_1" targetRef="Activity_13zhr0d" />
+    <bpmn:sequenceFlow id="Flow_0rarro0" sourceRef="Activity_13zhr0d" targetRef="Event_1su39zx" />
+    <bpmn:endEvent id="Event_1su39zx">
+      <bpmn:incoming>Flow_0rarro0</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="Activity_13zhr0d" name="Send spam" camunda:delegateExpression="#{sendSpamDelegate}">
+      <bpmn:incoming>Flow_1a2wwuo</bpmn:incoming>
+      <bpmn:outgoing>Flow_0rarro0</bpmn:outgoing>
+    </bpmn:serviceTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0a5azqh">
+      <bpmndi:BPMNShape id="Participant_0c4avth_di" bpmnElement="Participant_0c4avth" isHorizontal="true">
+        <dc:Bounds x="129" y="90" width="511" height="250" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1a2wwuo_di" bpmnElement="Flow_1a2wwuo">
+        <di:waypoint x="215" y="210" />
+        <di:waypoint x="350" y="210" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0rarro0_di" bpmnElement="Flow_0rarro0">
+        <di:waypoint x="450" y="210" />
+        <di:waypoint x="552" y="210" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_046hyqx_di" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="192" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="172" y="235" width="50" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1su39zx_di" bpmnElement="Event_1su39zx">
+        <dc:Bounds x="552" y="192" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_09evuhc_di" bpmnElement="Activity_13zhr0d">
+        <dc:Bounds x="350" y="170" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

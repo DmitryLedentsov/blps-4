@@ -1,0 +1,49 @@
+{
+  "components": [
+    {
+      "text": "# Auth",
+      "type": "text",
+      "id": "Field_10lmz6c"
+    },
+    {
+      "label": "Username",
+      "type": "textfield",
+      "id": "Field_0msqr67",
+      "key": "username",
+      "validate": {
+        "required": true,
+        "minLength": 4,
+        "maxLength": 20
+      },
+      "properties": {}
+    },
+    {
+      "label": "Password",
+      "type": "textfield",
+      "id": "Field_0yds1pa",
+      "key": "password",
+      "validate": {
+        "required": true,
+        "minLength": 4,
+        "maxLength": 20
+      }
+    },
+    {
+      "action": "submit",
+      "label": "Sign In",
+      "type": "button",
+      "id": "Field_0d4rkj6",
+      "key": "field_1nn42wt",
+      "properties": {}
+    }
+  ],
+  "type": "default",
+  "id": "AuthForm",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.0.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.17.0",
+  "schemaVersion": 4
+}

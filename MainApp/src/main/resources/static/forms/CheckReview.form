@@ -1,0 +1,58 @@
+{
+  "components": [
+    {
+      "text": "# Check Review",
+      "type": "text",
+      "id": "Field_0i95lj4"
+    },
+    {
+      "label": "Available reviews:",
+      "type": "textfield",
+      "id": "Field_1d9mxdu",
+      "key": "unapprovedReviews",
+      "defaultValue": "#{unapprovedReviews}",
+      "disabled": true
+    },
+    {
+      "label": "Selected review id",
+      "type": "number",
+      "id": "Field_0r8a7yy",
+      "key": "reviewId",
+      "validate": {
+        "required": true,
+        "min": 1
+      }
+    },
+    {
+      "label": "Approve it",
+      "type": "checkbox",
+      "id": "Field_0rtiukw",
+      "key": "isApproved"
+    },
+    {
+      "label": "Your comments",
+      "type": "textfield",
+      "id": "Field_02l7vof",
+      "key": "message",
+      "validate": {
+        "minLength": 1
+      }
+    },
+    {
+      "action": "submit",
+      "label": "Submit",
+      "type": "button",
+      "id": "Field_1ulcnft",
+      "key": "field_1n2qvbj"
+    }
+  ],
+  "type": "default",
+  "id": "CheckReview",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.0.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.17.0",
+  "schemaVersion": 4
+}

@@ -1,0 +1,41 @@
+{
+  "components": [
+    {
+      "text": "# Wanna Auth?",
+      "type": "text",
+      "id": "Field_0wmrq5m"
+    },
+    {
+      "values": [
+        {
+          "label": "Yes",
+          "value": "true"
+        },
+        {
+          "label": "No",
+          "value": "false"
+        }
+      ],
+      "type": "radio",
+      "id": "Field_0deeq9b",
+      "key": "wannaAuth",
+      "defaultValue": "false"
+    },
+    {
+      "action": "submit",
+      "label": "Submit",
+      "type": "button",
+      "id": "Field_1nsgyak",
+      "key": "field_070yqn6"
+    }
+  ],
+  "type": "default",
+  "id": "WannaAuthForm",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.0.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.17.0",
+  "schemaVersion": 4
+}
